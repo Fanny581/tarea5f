@@ -45,6 +45,8 @@ class ventaController extends Controller
      */
     public function show($id)
     {
+        return view('vista1',  ['id' => $id, 'title' => '']);
+   
         //
     }
 

@@ -1,5 +1,7 @@
 <?php
-
+use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\inveController;
+use App\Http\Controllers\ventaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,12 +18,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-    Route::get('/ruta1', function () {
-        return ('Ruta 1');
-    });
-Route::get('/ruta2', function () {
-    return ('Ruta 2');
-});
-    Route::get('/ruta3', function () {
-        return ('ruta 3');
-    });
+Route::get('/ruta1/{ruta1?}', [ventaController::class, 'show']);
+Route::get('/ruta2/{ruta2?}', [ClienteController::class, 'show']);
+Route::get('/ruta3/{ruta3?}', [inveController::class, 'show']);

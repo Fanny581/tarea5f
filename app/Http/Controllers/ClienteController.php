@@ -45,6 +45,8 @@ class ClienteController extends Controller
      */
     public function show($id)
     {
+        return view('vista2', ['id' => $id, 'title' => '']);
+  
         //
     }
 

@@ -45,6 +45,8 @@ class inveController extends Controller
      */
     public function show($id)
     {
+        return view('vista3', ['id' => $id, 'title' => '']);
+  
         //
     }
 
